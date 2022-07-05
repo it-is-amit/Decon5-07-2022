@@ -1,0 +1,209 @@
+/* all divisions markers " for debugging purpose "
+.leftSection img { border: 1px solid green; }
+.details { border: 1px solid red; }
+.upperSection { background-color: aquamarine; }
+.lowerSection { background-color: blanchedalmond; }
+.leftSection, .ApplicationrightSection { border: 1px solid black; }
+.leftSection img { border: 1px solid green; } */
+
+/* application page 1 styling */
+.application {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--PrimaryBackCol);
+  padding: 70px 7vw 0px 7vw;
+  display: flex;
+  flex-direction: column;
+}
+.upperSection {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.headingWrapper {
+  width: 56%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lowerSection {
+  width: 100%;
+  height: 78%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.leftSection {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftSection img {
+  width: 100%;
+}
+
+.ApplicationrightSection {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.details {
+  width: 100%;
+  margin: 10px;
+}
+.details .universalParaghraph {
+  border-left: 6px solid var(--DeconOfficialCol);
+  padding-left: 10px;
+  margin: 6px 0px 0px 0px;
+}
+.buttons {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  align-items: center;
+}
+.googlePLay,
+.webappButton {
+  height: 46px;
+  border: 1px solid var(--DeconOfficialCol);
+  color: var(--DeconOfficialCol);
+  width: 48% !important;
+  user-select: none;
+}
+.buttons .universalButton img {
+  height: 26px;
+}
+@media screen and (max-width: 350px) {
+  .buttons .universalButton img {
+    height: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .buttons .universalButton img {
+    height: 24px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .application {
+    height: fit-content;
+    padding: 70px 7vw 70px 7vw;
+  }
+  .upperSection {
+    height: fit-content;
+    flex-direction: column;
+  }
+  .headingWrapper,
+  .buttons {
+    width: 100%;
+  }
+
+  .lowerSection {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .leftSection,
+  .ApplicationrightSection {
+    width: 100%;
+  }
+  .details .universalParaghraph {
+    border-left: none;
+    padding-left: 0px;
+    margin: 6px 0px 0px 0px;
+  }
+  .leftSection {
+    height: fit-content;
+  }
+  .leftSection img {
+    width: 70%;
+  }
+}
+
+/* applicatio page 2 styling */
+.application_page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--SecondaryBackCol);
+  object-fit: contain;
+  scroll-snap-align: start;
+  padding: 70px 7vw 70px 7vw;
+
+  display: flex;
+  flex-direction: row;
+}
+.featureImage {
+  width: 50px;
+}
+.contentLeft,
+.contentRight {
+  width: 35%;
+  height: 100%;
+}
+.featureleft {
+  text-align: right;
+  margin: 20px;
+  /* background-color: aqua; */
+}
+.featureright {
+  text-align: left;
+  margin: 20px;
+}
+.deviceMockup {
+  width: 38%;
+}
+.contentLeft,
+.contentRight,
+.deviceMockup {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deviceMockup img {
+  width: 120%;
+}
+
+@media screen and (max-width: 700px) {
+  .application_page2 {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .featureImage {
+    width: 50px;
+    height: 50px;
+  }
+  .deviceMockup {
+    display: none;
+  }
+  .featureleft,
+  .featureright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    /* border: 1px solid red; */
+  }
+  .featureleft div {
+    margin-left: 20px;
+  }
+  .featureright div {
+    margin-left: 20px;
+  }
+  .contentLeft,
+  .contentRight {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+}

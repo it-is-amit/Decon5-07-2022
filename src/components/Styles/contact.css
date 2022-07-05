@@ -1,0 +1,161 @@
+.contact {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--SecondaryBackCol);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-padding-top: 5vh;
+  padding: 2em 7vw;
+  font-family: "Open Sans", sans-serif;
+}
+.base {
+  width: 100%;
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.contactHeading {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  /* background-color: #35373d; */
+}
+
+.contactButton {
+  border: 1px solid var(--DeconOfficialCol);
+  color: var(--DeconOfficialCol) !important;
+  background-color: transparent;
+}
+
+.contactForm {
+  width: 100%;
+  padding: 10px 0vw;
+}
+.nameEmail {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.nameEmail input {
+  height: 50px;
+  background: var(--PrimaryBackCol);
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  padding: 0px 20px;
+  border-radius: 5px;
+  color: var(--ParaColor) !important;
+}
+
+.nameEmail input:focus {
+  border: 1px solid var(--ParaColor);
+}
+
+#name {
+  margin-bottom: 10px;
+}
+
+.message textarea {
+  width: 100%;
+  height: 110px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  background: var(--PrimaryBackCol);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--ParaColor) !important;
+}
+
+.message textarea:focus {
+  border: 1px solid white;
+}
+
+.nameEmail,
+.message {
+  width: 50%; 
+}
+
+.textFeilds {
+  display: flex;
+  animation: delayin 0.5s linear;
+}
+
+@keyframes delayin {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.send {
+  position: absolute;
+  border: 1px solid var(--DeconOfficialCol) !important;
+  transform: translate(0, 8.5em);
+  width: fit-content;
+  height: 50px;
+  color: white;
+  padding: 0px 20px;
+  background-color: transparent;
+  color: var(--ParaColor) !important;
+}
+
+.result {
+  margin-top: 65px;
+  margin-left: 0;
+  animation: send 1s linear;
+  color: var(--ParaColor);
+}
+
+@keyframes send {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nameEmail input {
+    font-size: 14px;
+  }
+  .message textarea {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nameEmail,
+  .message {
+    width: 100%;
+  }
+  .textFeilds {
+    display: flex;
+    flex-direction: column;
+  }
+  .nameEmail {
+    padding-right: 0;
+  }
+  #name,
+  #email {
+    margin-bottom: 10px;
+  }
+  .send {
+    transform: translate(0, 240px);
+    width: 86%;
+  }
+}

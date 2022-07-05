@@ -1,0 +1,210 @@
+.navbarBase {
+  background-color: transparent;
+  /* background-color: black; */
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  transition: 0.3s;
+  /* border-bottom: 1px solid white; */
+  padding: 0px 7vw;
+  /* filter: blur(2px); */
+  /* overflow-x: hidden; */
+}
+
+.navbarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px 10px;
+  padding: 0;
+}
+
+.websiteLinks {
+  font-family: "Open Sans", sans-serif;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* important for highlighting the active section in navbar */
+.linkContainer {
+  width: fit-content;
+  /* padding: 1.7%; */
+  font-size: 0.8em;
+  margin: 0px 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  /* border: 1px solid red; */
+}
+
+.active {
+  /* border-bottom: 4px solid var(--DeconOfficialCol); */
+  font-weight: 800;
+}
+.option {
+  font-size: 18px;
+  color: white;
+  margin: 2.4vh 4vh;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.companylogocontainer {
+  /* width: 6%; */
+  height: 30px;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* positioning */
+  position: absolute;
+  top: 0.6em;
+  left: 7vw;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+.companylogocontainer img {
+  width: 100%;
+  height: 100%;
+}
+#logoDesktop {
+  display: block;
+}
+#logoMobile {
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.bars {
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  margin-right: 7vw;
+}
+.bar {
+  width: 100%;
+  height: 2px;
+  margin: 3px 0px;
+  background-color: white;
+}
+.barBlack{
+  background-color: var(--DeconOfficialCol);
+}
+
+
+
+/* displaying the hmaburger menu in mobile screens */
+.hamMenuIcon {
+  display: none !important;
+}
+
+#myDiv {
+  margin-top: 0px !important;
+  display: inline;
+}
+
+.atHome{ 
+  background-color: transparent !important;
+}
+.atOther{ 
+  background-color: white !important;
+}
+.atHomeCol{ color: white !important; }
+.atOtherCol{ color: red !important; }
+
+@media (max-width: 1000px) {
+  #myDIV {
+    display: none !important;
+  }
+  .hamMenuIcon {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .companylogocontainer img {
+    width: 30px;
+    /* background-color: black; */
+  }
+  .companylogocontainer{
+    width: fit-content;
+  }
+  .navbarWrapper{
+    justify-content: flex-end;
+  }
+  #logoDesktop {
+    display: none;
+  }
+  #logoMobile {
+    display: block;
+  }
+
+  /* navbar hamburgermenu */
+  .hamburgerMenu {
+    display: block;
+    /* margin-right: 6vw; */
+    /* background-color: #0C9136; */
+  }
+  .hamburgerMenu img {
+    background-color: black;
+  }
+
+  #ham {
+    color: white;
+  }
+
+  .websiteLinks {
+    display: none;
+  }
+
+  .hamMenuItems {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.822);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: 0.3s;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+    flex-direction: column;
+    animation: menu 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @keyframes menu {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }
+
+  .hamMenuItems i {
+    color: white;
+    margin: 5vh;
+  }
+}

@@ -1,0 +1,246 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  background-color: black;
+}
+.back {
+  object-fit: fit;
+  z-index: 1;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  opacity: 0.9;
+  filter: saturate(0);
+}
+.bigHeading {
+  width: 70%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800 !important;
+}
+.bigHeading p {
+  font-size: 2.5vw;
+}
+
+.bigHeading , .deviceWrapper , .smallHeading{
+  z-index: 2;
+  /* border: 1px solid red; */
+}
+
+.smallHeading {
+  width: 80%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white !important;
+}
+.smallHeading p {
+  font-size: 1.1vw;
+  color: white !important;
+  margin-bottom: 1em;
+}
+.button {
+  width: 100%;
+  height: 50px;
+  /* background-color: black; */
+  display: flex; justify-content: center; align-items: center;
+}
+.deviceWrapper {
+  width: 60%;
+  /* border: 2px solid red; */
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.deviceWrapper img{
+  filter: saturate(1);
+}
+.device {
+  width: 50%;
+}
+.paragraph_BreakPoint {
+  display: block;
+}
+.videoButton{
+  border: 1px solid white;
+  transition: 0.3s;
+}
+.videoButton i{
+  margin-left: 10px;
+}
+.videoButton:hover{
+  background-color: #114a6d;
+  border: none;
+}
+.VideoWrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.452);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  z-index: 300;
+}
+
+.video{
+  width: 80vw;
+  height: 90vh;
+}
+
+.close{
+  width: 10vw;
+  height: 50px;
+  /* background-color: red; */
+  position: fixed;
+  top: 6vh;
+  left: 0;
+  z-index: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex; justify-content: center; align-items: center;
+  border-radius: 100px;
+}
+.circle i{ color: black; }
+
+.spinner {
+  position: fixed;
+  border: 6px solid var(--DeconOfficialCol);
+  border-radius: 50%;
+  border-top: 6px solid transparent;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+  z-index: -1;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .device {
+    width: auto;
+    height: 200%;
+  }
+  .deviceWrapper{
+    height: 25vh;
+  }
+  .bigHeading {
+    width: 90%;
+    height: fit-content;
+  }
+  .bigHeading p {
+    font-size: 6vw;
+  }
+  .smallHeading {
+    width: 90%;
+  }
+  .smallHeading p {
+    font-size: 1.7vw;
+  }
+  .paragraph_BreakPoint {
+    display: none;
+  }
+  .back {
+    opacity: 0.9;
+  }
+  .video{
+    width: 90vw;
+    height: 74vh;
+  }
+  .close{
+    left: 5vw;
+  }
+  .videoButton:hover{
+    border: 1px solid white;
+    background-color: transparent;
+    border: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .device {
+    width: auto;
+    height: 200%;
+  }
+  .bigHeading p {
+    font-size: 8vw;
+  }
+  .smallHeading p {
+    font-size: 14px;
+  }
+  .deviceWrapper {
+    width: 90%;
+  }
+  .circle{
+    background-color: transparent;
+  }
+  .circle i{
+    color: white;
+  }
+}
+@media screen and (max-width: 350px) {
+  .device {
+    width: auto;
+    height: 200%;
+  }
+  .bigHeading p {
+    font-size: 9vw;
+  }
+  .smallHeading p {
+    font-size: 14px;
+  }
+  .deviceWrapper {
+    width: 90%;
+    height: 35vh;
+  }
+}
+@media screen and (max-height: 500px) {
+  .deviceWrapper {
+    display: none;
+  }
+}
+@media screen and (min-height: 800px) {
+  .device {
+    width: auto;
+    height: 140%;
+  }
+}

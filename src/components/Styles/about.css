@@ -1,0 +1,90 @@
+.about {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--SecondaryBackCol);
+  display: flex;
+  /* padding: 0px 7vw; */
+}
+.OpendeviceWrapper {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 7vw;
+}
+.OpendeviceWrapper img {
+  width: 73%;
+}
+.textWrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aboutContainer,
+.vysion {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid green; */
+  padding: 0px 2vw 0px 7vw;
+}
+.aboutContainer p,
+.vysion p {
+  margin-bottom: 10px;
+}
+.vysion {
+  /* background-color: var(--PrimaryBackCol); */
+}
+.vysionWebsiteButton {
+  border: 1.5px solid var(--DeconOfficialCol);
+  color: var(--DeconOfficialCol);
+  margin-top: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.vysion a {
+  text-decoration: none;
+}
+.vysionWebsiteButton:hover {
+  color: var(--SecondaryBackCol);
+  background-color: var(--DeconOfficialCol);
+  text-decoration: none;
+}
+.breakPoint{
+  display: none;
+}
+.highlight{
+  font-weight: 500 !important;
+  color: var(--DeconOfficialCol);
+}
+@media screen and (max-width: 900px) {
+  .about{
+    height: fit-content;
+  }
+  .OpendeviceWrapper {
+    display: none;
+  }
+  .textWrapper {
+    width: 100%;
+  }
+  .aboutContainer,
+  .vysion {
+    padding: 2em 7vw 3em 7vw;
+  }
+  .breakPoint{
+    display: block;
+  }
+  .vysionWebsiteButton:hover {
+    border: 1.5px solid var(--DeconOfficialCol);
+    color: var(--DeconOfficialCol);
+    background-color: transparent;
+    text-decoration: none;
+  }
+}

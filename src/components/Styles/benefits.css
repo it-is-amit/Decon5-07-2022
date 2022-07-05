@@ -1,0 +1,79 @@
+.benefits{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--PrimaryBackCol);
+  /* background-color: bisque; */
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefits .SmallHeadings{
+  height: 10vh;
+}
+.benefitsWrapper {
+  width: 100vw;
+  height: 80vh;
+  background-color: var(--PrimaryBackCol);
+  padding: 0px 7vw 0px 7vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Benefitbox {
+  width: 30%;
+  height: 42%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+.Benefitbox img{ width: 23%; margin-bottom: 2em; }
+.Benefitbox p{ text-align: center; }
+.XtraSmallHeadings {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vw;
+    /* width: 100%; */
+    font-weight: 800;
+    color: var(--HeadingColor);
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  
+@media screen and (max-width : 700px) {
+  .benefits{
+    height: fit-content;
+    padding-top: 40px;
+  }
+  .benefitsWrapper{
+    height: fit-content;
+    justify-content: flex-start;
+  }
+  .XtraSmallHeadings{
+    font-size: 2vw;
+    margin: 0px 0px 10px 0px;
+  }
+  .Benefitbox{
+    width: 100%;
+    padding: 1em;
+    /* background-color: var(--SecondaryBackCol); */
+    margin-bottom: 10px;
+  }
+  .Benefitbox img{ width: 50px; margin-bottom: 1.3em; }
+}
+
+@media screen and (max-width : 600px){
+  .XtraSmallHeadings{
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width : 500px){
+  .XtraSmallHeadings{
+    font-size: 5vw;
+  }
+}
